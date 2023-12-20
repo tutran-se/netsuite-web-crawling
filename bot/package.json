@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.1",
+    "node-cron": "^3.0.2",
+    "otpauth": "^9.2.1",
+    "puppeteer": "^19.7.5",
+    "redis": "^4.6.5",
+    "xlsx": "^0.18.5"
+  },
+  "name": "bot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

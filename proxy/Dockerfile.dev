@@ -1,0 +1,23 @@
+# Use a Node.js base image with the latest LTS version
+FROM node:15-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json into the container
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code into the container
+COPY . .
+
+# Set environment variable for development
+ENV NODE_ENV=development
+
+# Expose port 5000 for the container
+EXPOSE 4000
+
+# Start the application with nodemon
+CMD ["npm", "run", "dev"]
